@@ -1,0 +1,47 @@
+.signIn{
+    position: absolute;
+    top: 40%; 
+    left: 20%;
+    display: flex;
+    font-family: 'Staatliches', cursive;
+}
+.box1{
+    padding: 50px 70px;
+    z-index: 12;
+}
+.modelImg{
+    position: absolute;
+    width: 60%;
+    z-index: 11;
+    left: 20%;
+    top: -80%;
+}
+.dot2{
+    position: absolute;
+    height:1600px;
+    width: 1000px;
+    
+    left: -60%;
+    bottom: -180%;
+    background: linear-gradient(45deg, rgb(225, 46, 207), rgb(202, 13, 13));
+    z-index: 9;
+}
+.test{
+    font-size: 6rem;
+}
+.submitButton{
+    font-size: 2rem;
+    border-radius: 4px;
+    padding: 4px 8px;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+.submitButton:hover{
+    color:black;
+    background-color: white;
+}
+.signup{
+    display: block;
+    font-family: 'Staatliches', cursive;
+}

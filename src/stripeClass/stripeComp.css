@@ -1,0 +1,14 @@
+
+.stripeDiv{
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    border-radius: 2px;
+    border-style: solid;
+    height: 70%;
+    width: 50%;
+}
+.cardEl{
+    width: 20%;
+
+}

@@ -1,0 +1,104 @@
+section {
+    position: relative;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    overflow: hidden;
+}
+section::before{
+    content: '';
+    position: absolute;
+    width: 160vh;
+    height: 160vh;
+    left: 56%;
+    bottom: 0%;
+    border-radius: 50%;
+    background-color: #80fa35;
+}
+#dot2{
+    position: absolute;
+    width: 700px;
+    height:700px;
+    border-radius: 50%;
+    top: 70%;
+    right: 70%;
+    background-color: #80fa35;
+}
+#btn{
+    font-family: 'Staatliches', cursive;
+    position: absolute;
+    top: 46%;
+    font-size: 3rem;
+    border-radius: 10%;
+    padding: 10px 30px;
+    color: black;
+    background-color: #80fa35;
+}
+#btn:hover{
+    cursor: pointer;
+    color: #80fa35;
+    background-color: black;
+}
+
+section img {
+    position: absolute;
+    width: 50%;
+    left: 42%;
+    transform: rotate(-25deg);
+    filter: drop-shadow(16px 20px 14px black);
+    animation: slideLeft 1s ease forwards
+}
+@keyframes slideLeft {
+    0%{
+        transform: translateX(0);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(200);
+        opacity: 1;
+    }
+}
+section img:hover{
+    
+}
+@keyframes move {
+    0% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+section #text {
+    z-index: 10;
+    color: black;
+    font-family: 'Staatliches', cursive;
+    position: absolute;
+    top: 26%;
+    font-size: 6rem;
+}
+#text2{
+    top: 40%;
+    font-size: 1.8rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    position: absolute;
+}
+.sec {
+    position: relative;
+    padding: 100px;
+}
+
+.sec h2 {
+    color: black;
+    font-family: 'Staatliches', cursive;
+    font-size: 3rem;
+}
+
+.sec p {
+    color: black;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}

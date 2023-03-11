@@ -1,0 +1,206 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    min-height: 100vh;
+    background: linear-gradient(#ffffff, #ffffff);
+    display: grid;
+}
+header{
+    position: realtive;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 100px;
+}
+header .logo{
+    height: 70px;
+    width: 70px;
+
+}
+header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li {
+    list-style: none;
+    margin-left: 30px;
+}
+header ul li a {
+    font-size: 1.4rem;
+    font-family: 'Staatliches', cursive;
+    color: black;
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 14px;
+}
+header ul li a:hover {
+    background-color: black;
+    color: white;
+}
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+section img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+section #text{
+    color: black;
+    font-family: 'Staatliches', cursive;
+    position: absolute;
+    top: 26%;
+    font-size: 4rem;
+}
+.sec{
+    position: relative;
+    padding: 100px;
+}
+.sec h2{
+    color: black;
+    font-family: 'Staatliches', cursive;
+    font-size: 3rem;
+}
+.sec p{
+    color: black;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.container{
+    position: relative;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    overflow: hidden;
+}
+.container::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -40rem;
+    background: linear-gradient(#f2ff00, #faf035);
+    width: 100%;
+    height: 120vh;
+    transform: rotate(-55deg);
+    overflow: hidden;
+    z-index: 8;
+}
+.wrapper h4{
+    font-family: 'Staatliches', cursive;
+    color: black;
+    font-size: 3rem;
+}
+
+.wrapper p{
+    color: black;
+    font-family: 'Staatliches', cursive;
+    font-size: 1.6rem;
+}
+.wrapper a{
+    color: black;
+    font-family: 'Staatliches', cursive;
+    border-radius: 20px;
+    padding: 4px 8px;
+}
+.wrapper a:hover {
+    background-color: black;
+    color: white;
+}
+#shirt1{
+    position: absolute;
+    width: 50%;
+    z-index: 10;
+    transform: rotate(15deg);
+    filter: drop-shadow(30px, 40px, 30px, #161616);
+}
+.row{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.card{
+    width: 300px;
+    height:460px;
+    position: relative;
+    padding: 20px 50px;
+    border-radius: 10px;
+    border-color: black;
+    border-style: solid;
+    align-items: center;
+    margin: 60px;
+    text-align: center;
+    grid-template-columns: repeat(4, 1fr);
+
+}
+.shirtCard{
+    position: absolute;
+    width: 90%;
+    z-index: 10;
+    right: 4%;
+}
+.dot{
+    height:230px;
+    width: 230px;
+    border-radius: 50%;
+    background-color: #faf035;
+    position: absolute;
+    z-index: 9;
+    left: 10%;
+}
+.card:hover .h4Shirt{
+    opacity: 1;
+}
+.card:hover a {
+    opacity: 1;
+}
+.h4Shirt{
+    transition: 0.5s;
+    opacity: 1;
+    position: absolute;
+    top: 68%;
+    font-size: 3rem;
+    font-family: 'Staatliches', cursive;
+}
+.pShirt{
+    transition: 0.5s;
+    opacity: 1;
+    position: absolute;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    top: 80%;
+}
+.card a{
+    transition: 0.5s;
+    opacity: 0;
+    position: absolute;
+    top: 86%;
+    right: 58%;
+    color: black;
+    font-family: 'Staatliches', cursive;
+    border-radius: 20px;
+    padding: 4px 4px;
+}
+.card a:hover {
+
+    color:white;
+    background-color: black;
+}
