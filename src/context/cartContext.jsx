@@ -86,9 +86,6 @@ export const CartProvider  = ({children}) => {
     }, [])
 
     useEffect(() => {
-        if(cartItems === null){
-            setCartItems([])
-        }
         window.localStorage.setItem("itemsInCart", JSON.stringify(cartItems))
         console.log(cartItems)
     }, [cartItems])
