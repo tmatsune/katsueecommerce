@@ -81,9 +81,8 @@ export const CartProvider  = ({children}) => {
     useEffect(() => {
         const cartData = window.localStorage.getItem("itemsInCart")
         console.log(cartData)
-        if(cartData !== null){
-            const items = JSON.parse(cartData) || []
-            setCartItems(items)
+        if(cartData){
+            setCartItems(JSON.parse(cartData))
         }
     }, [])
 
