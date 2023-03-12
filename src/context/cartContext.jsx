@@ -80,12 +80,15 @@ export const CartProvider  = ({children}) => {
 
     useEffect(() => {
         const cartData = window.localStorage.getItem("itemsInCart")
-        setCartItems(JSON.parse(cartData))
-        //console.log(JSON.parse(cartData))
-        
+        if(cartData !== null){
+            setCartItems(JSON.parse(cartData))
+        }
     }, [])
 
     useEffect(() => {
+        if(cartItems === null){
+            setCartItems([])
+        }
         window.localStorage.setItem("itemsInCart", JSON.stringify(cartItems))
         console.log(cartItems)
     }, [cartItems])
