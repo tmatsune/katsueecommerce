@@ -24,12 +24,14 @@ function LogIn(){
     //const {email, password} = logInField
     const {currentUser, setCurrentUser} = useContext(UserContext)
 
+
     async function googlePopUp(){
         const popup = await signInWithGooglePopUp();
         console.log(popup)
         createUserDocument(popup.user)// popup is userRef
         setCurrentUser(popup)
     }
+
     function showCurrent(){
         console.log(currentUser)
     }
@@ -47,7 +49,7 @@ function LogIn(){
             <div className="dot2"></div>
             <img src={MODEL1} alt='' className="modelImg"></img>
             {
-                //<button onClick={showCurrent}></button>
+               // <button onClick={showCurrent}></button>
             }
         </div>
     )

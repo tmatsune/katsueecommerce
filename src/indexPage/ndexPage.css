@@ -44,7 +44,7 @@ section img {
     position: absolute;
     width: 50%;
     left: 42%;
-    bottom: 2%;
+    bottom: 5.4%;
     transform: rotate(-25deg);
     filter: drop-shadow(16px 20px 14px black);
     animation: slideLeft 1s ease forwards

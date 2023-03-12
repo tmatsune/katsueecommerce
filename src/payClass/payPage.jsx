@@ -3,9 +3,16 @@ import { useContext, useState, useEffect } from 'react';
 import { CartContext } from '../context/cartContext';
 import SHIRT2 from '../images/shirt6.webp'
 import SWEATER from '../images/hoodie.png'
+import NIKE7 from '../images/nike7.png'
+import NIKE2 from '../images/nike2.png'
+import NIKE3 from '../images/nike3.png'
+import NIKE5 from '../images/nike5.png'
+import SHIRT1 from '../images/shirt1.png'
 import PAYMENT from '../images/payment.png'
-import { useNavigate } from 'react-router';
 import StripeComp from '../stripeClass/stripeComp'
+
+var images = [SHIRT2, SHIRT1, SWEATER, NIKE2, NIKE7, NIKE3, NIKE5, SHIRT2]
+
 
 function PayPage(){
     const {cartItems, getCost, costItems, totalItems, quantityItems} = useContext(CartContext)
@@ -45,7 +52,7 @@ function PayPage(){
                 <h4>Delivery: Free</h4>
                 <hr className="cost"></hr>
                 <h3>Total: ${costItems}</h3>
-                <label for="nameInput" id="nameLabel">Enter Name: </label>
+                <label htmlFor="nameInput" id="nameLabel">Enter Name: </label>
                 <input 
                     placeholder='Enter Name' 
                     value={name} name="nameInput"
@@ -75,7 +82,7 @@ function PayPageItem({item}){
 
     return(
         <div className="payItem">
-            <img alt='' className="payImg" src={SWEATER}></img>
+            <img alt='' className="payImg" src={images[item.id]}></img>
             <div >
                 <h3>{title} </h3>
                 <h3 >Quantity: {quantity}</h3>

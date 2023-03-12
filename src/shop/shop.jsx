@@ -3,10 +3,16 @@ import './shopStyles.css'
 import { useEffect } from 'react';
 import SHIRT2 from '../images/shirt6.webp'
 import SWEATER from '../images/hoodie.png'
+import NIKE7 from '../images/nike7.png'
+import NIKE2 from '../images/nike2.png'
+import NIKE3 from '../images/nike3.png'
+import NIKE5 from '../images/nike5.png'
 import itemsList from '../testUtils';
 import { useContext } from 'react';
 import { CartContext } from '../context/cartContext';
 import { ProductContext } from '../context/productContext';
+
+var images = [SHIRT2, SHIRT1, SWEATER, NIKE2, NIKE7, NIKE3, NIKE5, SHIRT2]
 
 function Shop(){    
     const {products} = useContext(ProductContext)
@@ -31,12 +37,11 @@ function Shop(){
                 <img src={SHIRT1} id="shirt1" alt=''></img>
             </div>
         </div>
-            <h1>Shirts</h1>
             <div className='row'>
             {
                 products.map(item => {
                     return(
-                        <ShirtCard num={item} key={item.id}></ShirtCard>
+                        <ShirtCard num={item} key={item.id} image={images[item.id]}></ShirtCard>
                     )
                 })
             }
@@ -45,7 +50,7 @@ function Shop(){
     )
 }
 
-function ShirtCard({num}){
+function ShirtCard({num, image}){
     const {title, text, cost} = num
     const {addItem} = useContext(CartContext)
 
@@ -55,7 +60,7 @@ function ShirtCard({num}){
 
     return(
         <div className='card'>
-            <img className="shirtCard" src={SWEATER} alt=''></img>
+            <img className="shirtCard" src={image} alt=''></img>
             <span className="dot"></span>
             <h4 className="h4Shirt">{title}</h4>
             <p className="pShirt">{text}</p>

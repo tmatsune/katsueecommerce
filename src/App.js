@@ -7,6 +7,7 @@ import PayPage from './payClass/payPage';
 import StripeComp from './stripeClass/stripeComp';
 
 function App() {
+
   return (
     <div className="App">
         <Routes>
