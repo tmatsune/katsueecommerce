@@ -82,7 +82,8 @@ export const CartProvider  = ({children}) => {
         const cartData = window.localStorage.getItem("itemsInCart")
         console.log(cartData)
         if(cartData !== null){
-            setCartItems(JSON.parse(cartData))
+            const items = JSON.parse(cartData) || []
+            setCartItems(items)
         }
     }, [])
 
