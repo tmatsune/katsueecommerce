@@ -89,7 +89,7 @@ export const CartProvider  = ({children}) => {
     useEffect(() => {
         window.localStorage.setItem("itemsInCart", JSON.stringify(cartItems))
         console.log(cartItems)
-    }, [cartItems])
+    })
 
     const removeItem = (item) => {
         setCartItems(popItem(cartItems, item))
