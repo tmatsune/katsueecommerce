@@ -11,18 +11,17 @@
 }
 .modelImg{
     position: absolute;
-    width: 60%;
+    width: 40%;
     z-index: 11;
     left: 20%;
-    top: -80%;
+    top: -70%;
 }
 .dot2{
     position: absolute;
-    height:1600px;
+    height:800px;
     width: 1000px;
-    
     left: -60%;
-    bottom: -180%;
+    bottom: -100%;
     background: linear-gradient(45deg, rgb(225, 46, 207), rgb(202, 13, 13));
     z-index: 9;
 }

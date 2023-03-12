@@ -1,7 +1,7 @@
 section {
     position: relative;
     height: 100vh;
-    padding: 100px;
+    padding: 80px;
     display: flex;
     overflow: hidden;
 }
@@ -11,7 +11,7 @@ section::before{
     width: 160vh;
     height: 160vh;
     left: 56%;
-    bottom: 0%;
+    bottom: 10%;
     border-radius: 50%;
     background-color: #80fa35;
 }
@@ -27,7 +27,7 @@ section::before{
 #btn{
     font-family: 'Staatliches', cursive;
     position: absolute;
-    top: 46%;
+    top: 50%;
     font-size: 3rem;
     border-radius: 10%;
     padding: 10px 30px;
@@ -44,6 +44,7 @@ section img {
     position: absolute;
     width: 50%;
     left: 42%;
+    bottom: 2%;
     transform: rotate(-25deg);
     filter: drop-shadow(16px 20px 14px black);
     animation: slideLeft 1s ease forwards
@@ -78,7 +79,7 @@ section #text {
     color: black;
     font-family: 'Staatliches', cursive;
     position: absolute;
-    top: 26%;
+    top: 22%;
     font-size: 6rem;
 }
 #text2{

@@ -4,7 +4,17 @@
     top: 12%;
     display: flex;
 }
-
+#nameInput{
+    position: relative;
+    top: 12%;
+    width: 50%;
+    height: 4%;
+}
+#nameLabel{
+    position: relative;
+    top: 12%;
+    height: 4%;
+}
 .prop {
     width: 460px;
     height: 680px;
@@ -54,9 +64,11 @@
 .prop h3{
     position: relative;
     top: 44%;
-
 }
-
+#accept{
+    position: relative;
+    margin-top: -20%;
+}
 .payDiv2 {
     width: 800px;
     border-width: 2px;

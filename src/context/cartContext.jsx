@@ -5,7 +5,10 @@ export const CartContext = createContext({
     cartItems : [],
     appendItem: () => {},
     popItem: () => {},
-    removeItem: () => {}
+    removeItem: () => {},
+    calcCost: () => {},
+    getTotalItems: () => {},
+
 });
 // cartItems will have items with amount in cart
 function appendItem(cartItems, addItem){
@@ -52,21 +55,43 @@ function popItem(cartItems, removeItem){
         return items2 // have to return new list for it to work 
     }
 
+}
 
+function calcCost(cartItems){
+    var totalCost = 0
+    cartItems.forEach(item => {
+        totalCost += item.quantity * item.cost
+    })
+    return totalCost
+}
+function getTotalItems(cartItems){
+    var totalItems = 0
+    cartItems.forEach(item => {
+        totalItems += item.quantity
+    })
+    return totalItems
 }
 
 
 export const CartProvider  = ({children}) => {
     const [cartItems, setCartItems] = useState([])
+    const [costItems, setTotalCost] = useState(0)
+    const [totalItems, setTotalItems] = useState(0)
 
     const removeItem = (item) => {
         setCartItems(popItem(cartItems, item))
     }
-
     const addItem = (item) => {
         setCartItems(appendItem(cartItems, item))
     }
-    const value = {cartItems, addItem, removeItem}
+    const getCost = (items) => {
+        setTotalCost(calcCost(items))
+    }   
+    const quantityItems = (items) => {
+        setTotalItems(getTotalItems(items))
+    }
+
+    const value = {cartItems, addItem, removeItem, getCost, costItems, totalItems, quantityItems}
 
     return  <CartContext.Provider value={value}>
                 {children}

@@ -33,7 +33,7 @@ header ul li a {
     color: black;
     text-decoration: none;
     padding: 6px 10px;
-    border-radius: 14px;
+    border-radius: 8px;
 }
 header ul li a:hover {
     background-color: black;
@@ -46,7 +46,7 @@ header ul li span {
     color: black;
     text-decoration: none;
     padding: 6px 10px;
-    border-radius: 14px;
+    border-radius: 8px;
 }
 header ul li span:hover {
     background-color: black;

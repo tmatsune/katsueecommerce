@@ -30,9 +30,8 @@ function IndexPage(){
             <section>
                 <img src={SWEATER} id="moon" alt=''></img>
                 <h2 id="text">KATSUE ACTIVE WEAR</h2>
-                <h4 id="text2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed qwewzas</h4>
+                <h4 id="text2">Comforatble and stylish active wear</h4>
                 <span id="btn">Click</span>
-                
             </section>
             <div className="sec" id="sec">
                 <h2>Katsue Active Wear</h2>

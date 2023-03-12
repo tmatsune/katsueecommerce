@@ -5,36 +5,23 @@ import SHIRT2 from '../images/shirt6.webp'
 import SWEATER from '../images/hoodie.png'
 import PAYMENT from '../images/payment.png'
 import { useNavigate } from 'react-router';
+import StripeComp from '../stripeClass/stripeComp'
 
 function PayPage(){
-    const {cartItems, removeItem} = useContext(CartContext)
-    const [numItems, setNumItems] = useState(0)
-    const [totalPrice, setTotalPrice] = useState(0)
-    const navigate = useNavigate()
-
-    function goToStripe(){
-        navigate('/stripe')
-    }
-
-    function amountInCart(){
-        var num = 0
-        cartItems.forEach(item => {
-            num += item.quantity
-        })
-        setNumItems(num)
-    }
-    function totalCost(){
-        var cost = 0
-        cartItems.forEach(item => {
-            cost += item.cost * item.quantity
-        })
-        setTotalPrice(cost)
-    }
+    const {cartItems, getCost, costItems, totalItems, quantityItems} = useContext(CartContext)
+    //const navigate = useNavigate()
+    //function goToStripe(){
+    //    navigate('/stripe')
+    //}
+    const [name, setName] = useState("")
 
     useEffect( () => {
-        amountInCart()
-        totalCost()
-    })
+        quantityItems(cartItems)
+        getCost(cartItems)
+    }, )
+    function nameHandler(e){
+        setName(e.target.value)
+    }
 
     return (
         <div className="payDiv">
@@ -53,13 +40,20 @@ function PayPage(){
             <div className="prop">
                 <h1>SUMMARY</h1>
                 <hr></hr>
-                <h4>Total Items: {numItems}</h4>
-                <h4>Total Cost: ${totalPrice}</h4>
+                <h4>Total Items: {totalItems}</h4>
+                <h4>Total Cost: ${costItems}</h4>
                 <h4>Delivery: Free</h4>
                 <hr className="cost"></hr>
-                <h3>Total: ${totalPrice}</h3>
-                <span onClick={goToStripe}>Pay</span>
-                <div className='accept'>
+                <h3>Total: ${costItems}</h3>
+                <label for="nameInput" id="nameLabel">Enter Name: </label>
+                <input 
+                    placeholder='Enter Name' 
+                    value={name} name="nameInput"
+                    id="nameInput"
+                    onChange={nameHandler}>
+                </input>
+                <StripeComp client={name}></StripeComp>
+                <div id='accept'>
                     <h4>Accepted Payment Methods:</h4>
                     <img alt='' src={PAYMENT} className="payment"></img>
                 </div>

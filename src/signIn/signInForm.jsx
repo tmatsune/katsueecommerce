@@ -46,7 +46,9 @@ function LogIn(){
             </div>
             <div className="dot2"></div>
             <img src={MODEL1} alt='' className="modelImg"></img>
-            <button onClick={showCurrent}></button>
+            {
+                //<button onClick={showCurrent}></button>
+            }
         </div>
     )
 }
